@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Account</title>
+	<link rel="stylesheet" href="style.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@1,300&display=swap" rel="stylesheet">
+</head>
+<body>
+	<div class="container">
+		<div class="navbar">
+			<div class="logo">
+				<a href="Online Shopping.html"><img src="images/logo.jpg" width="125px" alt="UBALE"></a>
+			</div>
+			<nav>
+				<ul>
+					<li><a href="Online Shopping.html">Home</a></li>
+				    <li><a href="about us.html">About Us</a></li>
+					<li><a href="Products.html">Sections</a></li>
+					<li><a href="#Contact Details">Contact</a></li>
+					<li><a href="account.html">Account</a></li>
+				</ul>
+			</nav>
+			<a href="cart.html"><img src="images/cart.jpg"alt="cart" width="30px"height="30px"></a>
+		</div>
+	</div>
+
+<!-----------------------account page---------------------------->
+
+<div class="account-page">
+	<div class="container">
+		<div class="row">
+			<div class="col-2">
+				<img src="images/shop.jpg" width="100%">
+			</div>
+			<div class="col-2">
+				<div class="form-container">
+					<div class="form-btn">
+						<span onclick="login()">Login</span>
+						<span onclick="register()">Register</span>
+						<hr id="Indicator">
+					</div>
+					<form id="LoginForm">
+						<input type="text" placeholder="Username">
+						<input type="password" placeholder="Password">
+					    <button type="Submit" class="btn">Login</button>
+					    <a href="">Forgot Password</a>
+					</form>
+
+					<form id="RegForm">
+					    <input type="text" placeholder="Username">
+					    <input type="email" placeholder="Email">
+					    <input type="password" placeholder="Password">
+					    <button type="Submit" class="btn">Register</button>
+					</form>	
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+	<!--------footer------->
+<div class="footer">
+	<section id="Contact Details">
+	<div class="container">
+		<div class="row">
+			<div class="footer col-1">
+				<h2>Contact Details</h2>
+			<p><pre>Mrs.Ubale,</pre>
+			   <pre>Subash Road,</pre>
+			   <pre>Near Moti Masjid,</pre>
+			   <pre>Jalna:431203</pre>
+			   <pre>Phone no:232425,Mobile no:9423243411</pre></p>
+			</div>
+			<div class="footer col-2">
+				<a href="Online Shopping.html"><img src="images/logo.jpg" width="150px" align="right" alt="UBALE"></a>
+			</div>
+			
+		</div>
+	</div>
+	<hr>
+	<p class="copyright"> Copyright 2022--Ubale Dresses</p>
+</div>
+
+<!--------js for toggle form----------->
+<script>
+	var LoginForm=document.getElementById("LoginForm");
+	var RegForm=document.getElementById("RegForm");
+	var Indicator=document.getElementById("Indicator");
+
+	function register(){
+		RegForm.style.transform="translateX(0px)";
+		LoginForm.style.transform="translateX(0px)";
+		Indicator.style.transform="translateX(100px)";
+	}
+
+	function login(){
+		RegForm.style.transform="translateX(300px)";
+		LoginForm.style.transform="translateX(300px)";
+		Indicator.style.transform="translateX(0px)";
+	}
+
+</script>
+
+
+</body>
+</html>
